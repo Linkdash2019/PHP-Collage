@@ -16,12 +16,9 @@
       $payments = $_POST['payments'];
       
       //Total cost caculation
-      $total = $price * $quantity;
-      $total = $total + $shipping;
-      $total = $total - $discount;
+      $total = (($price * $quantity) + $shipping) - $discount;
       //Plus tax
-      $taxrate = $tax / 100;
-      $taxrate = $taxrate + 1;
+      $taxrate = ($tax / 100) + 1;
       $total = $total * $taxrate;
       //Monthly payment calculation
       $monthly = $total / $payments;
