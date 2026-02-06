@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Feedback Form</title>
+  </head>
+  
+  <body>
+    <div>
+      <p>Please complete this form to sumbit your posting:</p>
+      <form action="handle_post.php" method="post">
+        <p>Name: 
+          <input type="text" name="fName" size="20" placeholder="First Name" required> 
+          <input type="text" name="lName" size="20" placeholder="Last Name" required>
+        </p>
+        
+        <!-- Email input box -->
+        <p>Email Address: 
+          <input type="email" name="email" size="20" placeholder="example@example.com" required>
+        </p>
+        
+        <!-- Text area (Big text box) -->
+        <p>Posting:
+          <textarea name="posting" rows="9" cols="30" required></textarea>
+        </p>
+        
+        <!-- Submit button -->
+        <input type="submit" name="submit" value="Send my Posting">    
+      </form>
+    </div>
+  </body>
+</html>          
