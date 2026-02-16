@@ -10,7 +10,11 @@
       $soups = [
         'Monday' => 'Clam Chowder',
         'Tuesday' => 'White Chicken Chili',
-        'Wednesday' => 'Vegetarian'
+        'Wednesday' => 'Vegetarian',
+        'Thursday' => 'Potsticker Soup',
+        'Friday' => 'Chicken Noodle',
+        'Saturday' => 'Tomato',
+        'Sunday' => 'CLOSED'
       ];
       
       print_r($soups); 
