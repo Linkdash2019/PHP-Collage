@@ -24,6 +24,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { //I wonder if using the array $_POST
 		$problem = true;
 	}
   
+  if (empty($_POST['address'])) {
+		$problem = true;
+	}
+  
+  if (empty($_POST['city'])) {
+		$problem = true;
+	}
+  
+  if (empty($_POST['state'])) {
+		$problem = true;
+	}
+  
+  if (empty($_POST['phone'])) {
+		$problem = true;
+	}
+  
   if (empty($_POST['password'])) {
 		$problem = true;
 	}
@@ -38,24 +54,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { //I wonder if using the array $_POST
     $hashPass = password_hash($_POST['password'], PASSWORD_DEFAULT);
     
     require('dbConnect.php');
+    $pdo = dbConnect();
     $sql = "INSERT INTO users (first_name, last_name, email, home_address, city, state, phone_number, password) 
             VALUES (:fName, :lName, :email, :address, :city, :state, :phone, :pass)";
     $stmt = $pdo->prepare($sql);
     
     $stmt->execute([
-      'fName'   => $_POST['fName'],
-      'lName'   => $_POST['lName'],
-      'email'   => $_POST['email'],
-      'address' => $_POST['address'],
-      'city'    => $_POST['city'],
-      'state'   => $_POST['state'],
-      'phone'   => $_POST['phone'],
-      'pass'    => $hashPass
+      'fName'   => trim($_POST['fName']),
+      'lName'   => trim($_POST['lName']),
+      'email'   => trim($_POST['email']),
+      'address' => trim($_POST['address']),
+      'city'    => trim($_POST['city']),
+      'state'   => trim($_POST['state']),
+      'phone'   => trim($_POST['phone']),
+      'pass'    => trim($hashPass)
     ]);
     
   
 		$body = "Thank you, {$_POST['fName']}, for registering!.";
     print '<p class="text--success">'.$body.'</p>';
+    print '<p><a href=index.php>Go Home</a></p>';
     
     $showForm = false;
 		$_POST = [];

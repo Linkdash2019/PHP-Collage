@@ -14,6 +14,7 @@ $showForm = true;
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   require('dbConnect.php');
+  $pdo = dbConnect();
   $sql = "SELECT * FROM users WHERE email = :email LIMIT 1";
   $stmt = $pdo->prepare($sql);
   $stmt->execute(['email' => $_POST['email']]);
@@ -27,7 +28,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   else{ $problem = true; }
 	
 	if (!$problem) {  
-    print '<p class="text--success">Success! Redirecting...</p>';
+    print '<p class="text--success">Success! (Login not fully implemented yet)</p>';
+    print '<p><a href=chkfiles.php>List file and directorys at /files</a></p>';
+    print '<p><a href=calculator.php>Simple Calculator</a></p>';
+    print '<p><a href=index.php>Go Home</a></p>';
     
     $showForm = false;
 		$_POST = [];
