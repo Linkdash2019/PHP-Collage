@@ -1,0 +1,92 @@
+3 1/2 hours spent
+The Menu creation went pretty well.
+I struggled with figuring out how to work with anything dictionary related
+
+Sorry there’s no screenshots of the output. I couldn’t use my computer today. I used ssh on my phone to do this
+
+Output:
+
+ubuntu@CamServ:~$ python3 main.py
+Who's birthday do you want to view?
+Enter help for help!
+>>> help
+help - View this message
+add - Add a new person and birthday to the database
+change - Edit the database
+remove - Delete someone from the database
+list - View all people in the database
+exit - End the program
+
+Who's birthday do you want to view?
+Enter help for help!
+>>> list
+People in database are:
+ Cameron
+ Kayden
+ Travis
+
+Who's birthday do you want to view?
+Enter help for help!
+>>> Cameron
+April 3 2008 
+
+Who's birthday do you want to view?
+Enter help for help!
+>>> add
+Enter the name of the person:
+>>> Bob
+Enter the birthday month NAME
+Example: December
+>>> October
+Enter the Birth Day
+Days 1-31
+>>> 30
+Enter the full birthday year
+Example: 2008
+>>> 1944
+Who's birthday do you want to view?
+Enter help for help!
+>>> list
+People in database are:
+ Cameron
+ Kayden
+ Travis
+ Bob
+
+Who's birthday do you want to view?
+Enter help for help!
+>>> Bob
+October 30 1944 
+
+Who's birthday do you want to view?
+Enter help for help!
+>>> remove
+Enter the name to delete
+>>> Cameron
+Who's birthday do you want to view?
+Enter help for help!
+>>> list
+People in database are:
+ Kayden
+ Travis
+ Bob
+
+Who's birthday do you want to view?
+Enter help for help!
+>>> change
+Enter the name to change
+>>> Bob
+What would you like to change?
+Month, Day, or Year
+>>> year
+Enter the new year
+>>> 2024
+Who's birthday do you want to view?
+Enter help for help!
+>>> bob
+October 30 2024 
+
+Who's birthday do you want to view?
+Enter help for help!
+>>> exit
+ubuntu@CamServ:~$ 

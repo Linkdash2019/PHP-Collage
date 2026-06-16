@@ -1,0 +1,5 @@
+In Python you can print messages to the terminal
+In Python you can read files on the users drive
+In Python you can take user input as a variable
+In Python you can do simple (or complex) math
+In Python you can make lists of data

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Final Project</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Retro Consoles US</h1>
+    <main>
+        
+        <div class = buttons>
+            <div>
+                <input type="radio" id="button1" name ="button" value="1" onchange="changeText('1')">
+                <label for="button1">Nintendo Entertainment System | $300</label>
+            </div>
+            <div>
+                <input type="radio" id="button2" name ="button" value="2" onchange="changeText('2')">
+                <label for="button2">Super Nintendo Entertainment System | $350</label>
+            </div>
+            <div>
+                <input type="radio" id="button3" name ="button" value="3" onchange="changeText('3')">
+                <label for="button3">Nintendo 64 | $200</label>
+            </div>
+            <div>
+                <input type="radio" id="button4" name ="button" value="4" onchange="changeText('4')">
+                <label for="button4">Nintendo Gamecube | $180</label>
+            </div>
+        </div>
+
+        <div class = description>
+            <p id="itemDesc">NULL</p>
+        </div>
+
+        <div class = image>
+            <img src="" alt="Image" id="itemImg">
+        </div>
+        
+        <div class="purchase">
+            <div>
+                <label for="quantity">Quantity:</label>
+                <input type="text" id="quantity" placeholder="Enter quantity">
+            </div>
+            <br>
+            <button onclick="compute()">Calculate Total</button>
+        </div>
+    </main>
+
+    <footer>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
